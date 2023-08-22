@@ -179,7 +179,8 @@ function on_message(self, message_id, message, sender)
 			end
 			self.followPos = self.followPos * (1/#self.data.follows)
 			self.followPos = rendercam.follow_lerp_func(self.data.lpos, self.followPos, self.dt)
-			self.data.lpos.x = self.followPos.x;  self.data.lpos.y = self.followPos.y
+			-- disable x follow ; self.data.lpos.x = self.followPos.x;  
+			self.data.lpos.y = self.followPos.y
 		end
 
 		if #self.data.recoils + #self.data.shakes + #self.data.follows > 0 then
